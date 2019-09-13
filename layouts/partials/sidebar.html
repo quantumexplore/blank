@@ -10,7 +10,7 @@
 		</div>
 		<div>
 			<ul>
-				{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+				{{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 				{{ end }}
 			</ul>
@@ -23,3 +23,16 @@
 
 
 </aside>
+
+<script src="https://utteranc.es/client.js"
+        repo="slarsar/slarsar-comment"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+<HR style="FILTER:alpha(opacity=100,finishopacity=0,style=2)" width="100%"color=#000000 SIZE=5>

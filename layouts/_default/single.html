@@ -1,12 +1,26 @@
 {{ define "main" }}
 	<main>
+	
+	
+
+
 		<article>
 			<h1>{{ .Title }}</h1>
 			<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
+			
+			<aside>
+				Table of Content： {{ .TableOfContents }}
+			</aside>
+			<HR style="FILTER:alpha(opacity=50,finishopacity=50,style=2)" width="100%"color=#000000 SIZE=1>
+
 			<div>
 				{{ .Content }}
 			</div>
 			<div>
+
+
+					<HR style="FILTER:alpha(opacity=100,finishopacity=0,style=2)" width="100%"color=#000000 SIZE=2>
+
 				<ul id="tags">
 					{{ range .Params.tags }}
 					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
@@ -17,6 +31,11 @@
 				{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>
+
+	
+
 	</main>
 {{ partial "sidebar.html" . }}
 {{ end }}
+
+

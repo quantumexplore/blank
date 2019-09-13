@@ -1,4 +1,4 @@
-
+{{ with .Page.Resources.ByType "image" }}
 {{ $original := .Page.Resources.GetMatch (printf "*%s*" (.Get 0)) }}
 {{ $command := .Get 1 }}
 {{ $options := .Get 2 }}
@@ -23,4 +23,7 @@
 	{{ end }}
 	</small>
 	</figcaption>
-</figure>   
+</figure> 
+
+{{ end }}
+
