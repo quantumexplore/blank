@@ -1,12 +1,41 @@
 <header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+
+	<h1>
+	<!-- | <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> -->
+	
 	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
+	<!-- <nav> -->
+		<!-- <ul> -->
+			
 			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			<!-- <li> -->
+				#<a href="{{ .URL | relURL }}">{{ .Name }}</a> 
+			<!-- </li> -->
 			{{ end }}
-		</ul>
-	</nav>
+		<!-- </ul> -->
+	<!-- </nav> -->
 	{{ end }}
+
+
+	
+<!-- {{ with .Site.Menus.os }} -->
+<!-- <nav> -->
+	<!-- <ul> -->
+		<!-- {{ range . }} -->
+		<!-- <li> -->
+			<!-- |  <a href="{{ .URL | relURL }}">{{ .Name }}</a>  -->
+		<!-- </li> -->
+		<!-- {{ end }} -->
+	<!-- </ul> -->
+<!-- </nav> -->
+<!-- {{ end }} -->
+<!-- | -->
+
+
+
+			</h1>
+
+			
+			<HR style="FILTER:alpha(opacity=100,finishopacity=0,style=2)" width="100%"color=#000000 SIZE=5>
+
 </header>
