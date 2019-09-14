@@ -19,18 +19,23 @@
 
 
 	
-<!-- {{ with .Site.Menus.os }} -->
-<!-- <nav> -->
-	<!-- <ul> -->
-		<!-- {{ range . }} -->
-		<!-- <li> -->
-			<!-- |  <a href="{{ .URL | relURL }}">{{ .Name }}</a>  -->
-		<!-- </li> -->
-		<!-- {{ end }} -->
-	<!-- </ul> -->
-<!-- </nav> -->
-<!-- {{ end }} -->
-<!-- | -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147959651-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147959651-1');
+</script>
+
+
+{{ if (.Params.mermaid) }}
+<!-- MermaidJS support -->
+<!-- <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script> -->
+
+<script async src="https://s1.pstatp.com/cdn/expire-1-M/mermaid/8.0.0-alpha.9/mermaid.min.js"></script>
+{{ end }}
 
 
 
